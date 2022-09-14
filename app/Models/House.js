@@ -73,7 +73,7 @@ export class House {
         </div>
 
         <div class="form-floating mb-3">
-          <textarea class="form-control" placeholder="Describe your Listing" name="description" value="${editable.description}"></textarea>
+          <textarea class="form-control" placeholder="Describe your Listing" name="description">${editable.description}</textarea>
           <label for="description">Description</label>
         </div>
 

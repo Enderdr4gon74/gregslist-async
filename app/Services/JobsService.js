@@ -7,9 +7,10 @@ class JobsService {
   async editJob(formData) {
     const job = appState.activeJob
     // @ts-ignore
-    const res = await SandboxServer.put(`/api/jobs${job.id}`, formData)
+    const res = await SandboxServer.put(`/api/jobs/${job.id}`, formData)
     console.log("the update response", res.data)
     const updatedJob = new Job(res.data)
+    console.log("the updated response", updatedJob)
     // @ts-ignore
     const index = appState.jobs.findIndex(j => j.id == job.id)
     appState.jobs.splice(index, 1, updatedJob)

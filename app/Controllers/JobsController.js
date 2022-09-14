@@ -44,6 +44,7 @@ export class JobsController {
       }
       // @ts-ignore
       form.reset()
+      this.showJobs()
     } catch (error) {
       console.error('[addJob]', error)
       Pop.error(error)
