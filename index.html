@@ -33,18 +33,20 @@
             <h6 class="mb-0 selectable p-2 rounded" onclick="app.jobsController.showJobs()">Jobs</h6>
           </div>
           <div>
-            <h6 class="mb-0 selectable p-2 rounded">Houses</h6>
+            <h6 class="mb-0 selectable p-2 rounded" onclick="app.housesController.showHouses()">Houses</h6>
           </div>
         </div>
         <div>
           <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#rightBar" onclick="app.carsController.addCar()">🚗 Add Car</button>
+          <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#apple" onclick="app.jobsController.addJob()">💼 Add Job</button>
+          <button class="btn btn-outline-light" data-bs-toggle="offcanvas" data-bs-target="#orange" onclick="app.housesController.addHouse()">🏠 Add House</button>
         </div>
       </div>
     </nav>
   </header>
   <main>
-    <div class="container">
-      <div class="row my-5" id="listings">
+    <div class="container-fluid">
+      <div class="row m-5" id="listings">
 
       </div>
     </div>
@@ -60,6 +62,26 @@
     <div class="offcanvas-body" id="forms">
       <!-- INJECT APPROPRIATE FORMS HERE FOR JOBS CARS ECT... -->
 
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="apple" aria-labelledby="appleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="appleLabel">List Job</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" id="formsJobs">
+      
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="orange" aria-labelledby="orangeLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="orangeLabel">List House</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" id="formsHouses">
+      
     </div>
   </div>
 
